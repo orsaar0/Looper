@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="pads">
+    <app-pad *ngFor="let pad of pads" [pad]="pad" (playAudio)="play(pad)" (stopAudio)="stop(pad)">
+    </app-pad>
+  </div>
+  <div class="controll-all">
+    <button class="record" > Record </button>
+    <button class="stop" (click)="stopAll($event)"> Stop All </button>
+  </div>
+</div>

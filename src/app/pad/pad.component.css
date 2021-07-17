@@ -1,0 +1,23 @@
+.pad {
+    padding: 10px;
+    background-color:lightskyblue;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.pad header {
+    margin-bottom :1em;
+}
+.pad img {
+    margin: 0 auto;
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.button{
+}
+
+
+

@@ -1,0 +1,24 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+.pads {
+  margin: 0 auto;
+  display: grid;
+  width: 100%; 
+  max-width: 600px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 3em;
+}
+
+.controll-all {
+  padding: 1em 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.controll-all > button {
+  margin-bottom: 1em;
+}
