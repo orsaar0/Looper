@@ -3,8 +3,9 @@
     <header>{{pad.name}}</header>
     <img [src]="pad.imgSrc"/>
     <button 
+      [disabled]="pad.btn?.disabled"
       (click)="changeState($event)"> 
-      {{pad.btn}} 
+      {{pad.btn?.label}} 
       </button>
   </div>
 <!-- </div> -->

@@ -12,27 +12,25 @@ export class PadComponent implements OnInit {
   @Output() playAudio: EventEmitter<Pad> = new EventEmitter();
   @Output() stopAudio: EventEmitter<Pad> = new EventEmitter();
 
-  play:boolean = false;
-  audio:HTMLAudioElement = new Audio();
+  audio: HTMLAudioElement = new Audio();
 
-  constructor() {    
+  constructor() {
   }
-  
+
   ngOnInit(): void {
     this.audio.loop = true;
     this.audio.src = `../../../assets/media/${this.pad.source}.mp3`;
     this.pad.audio = this.audio;
-    this.pad.btn = "Play";
+    this.pad.btn = { label: "Play", disabled: false };
   }
-  
-  changeState(e:Event){
+
+  changeState(e: Event) {
     e.stopPropagation();
-    // e.preventDefault();
-    this.play = !this.play;
-    if(this.play){
+    e.preventDefault();
+    if (this.pad.audio!.paused) {
       this.playAudio.emit(this.pad);
     }
-    else{
+    else {
       this.stopAudio.emit(this.pad);
     }
   }
