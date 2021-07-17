@@ -32,7 +32,7 @@ export class PadsComponent implements OnInit {
       this.start = Date.now();
     }
     else{
-      pad.btn = "Waiting...";
+      pad.btn = "Wait for it...";
       let waitingTime:number = 8000 - (Date.now()-this.start) % 8000; // setting the right time to play
       setTimeout(() => {
         if(!this.all_stopped){
