@@ -4,7 +4,9 @@
     </app-pad>
   </div>
   <div class="controll-all">
-    <button class="record" > Record </button>
-    <button class="stop" (click)="stopAll($event)"> Stop All </button>
+    <button class="record" (click)="handleRecordBtn()" > {{record_enabled? 'Stop Record' :
+      'Record'}} </button>
+    <button *ngIf = "!record_enabled && record_logs.length > 0" class="playRecord" (click)="playLastSession()"> {{playing_record? 'Pause Last Session' : 'Play Last Session'}} </button>
+    <button class="stop" (click)="stopAll()"> Stop All </button>
   </div>
 </div>
